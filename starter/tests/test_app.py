@@ -91,7 +91,7 @@ def test_hint_fills_empty_cell_with_correct_value_and_locks_it(client):
 
 
 def test_hints_fill_different_cells_and_do_not_replace_prefilled_cells(client):
-    client.get('/new?clues=80')
+    client.get('/new?clues=79')
     puzzle = app_module.CURRENT['puzzle']
     board = [row[:] for row in puzzle]
     prefilled = next(

@@ -48,7 +48,7 @@ def give_hint():
 
     hint = sudoku_logic.find_hint(puzzle, solution, CURRENT['hinted_cells'], board)
     if hint is None:
-        return jsonify({'error': 'No empty cells remain'}), 400
+        return jsonify({'error': 'No empty cells available'}), 400
 
     row, col, value = hint
     CURRENT['hinted_cells'].add((row, col))
